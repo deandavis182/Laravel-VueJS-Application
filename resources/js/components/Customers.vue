@@ -53,8 +53,13 @@
         </nav>
         <br>
         <div style="border: 5px double; border-width: thick; max-width: 25%; margin-bottom: 1em;" v-for="customer in customers" v-bind:key="customer.id">
-          <h3>{{ customer.customer }}</h3>
-          <p>{{ customer.email_address }}</p>
+          <h3>Name: {{ customer.customer }}</h3>
+          <p><strong>Address:</strong> {{ customer.address }}</p>
+          <p><strong>Phone Number:</strong> {{ customer.phone_number }}</p>
+          <p><strong>Email:</strong> {{ customer.email_address }}</p>
+          <p><strong>Customer Since:</strong> {{ customer.Start_Date }}</p>
+          <p><strong>Contract Start:</strong> {{ customer.Contract_Start_Date }}</p>
+          <p><strong>Contract Length (In weeks):</strong> {{ customer.Contract_Length }}</p>
           <hr>
           <button @click="deleteCustomer(customer.id)">Delete</button>
         </div>
